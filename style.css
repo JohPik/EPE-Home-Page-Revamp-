@@ -1,0 +1,50 @@
+.main-container {
+  max-width: 50em;
+  width:100%;
+  margin: auto;
+}
+
+.first-row, .second-row {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  flex-basis: 50%;
+  margin-top: 2%;
+}
+
+.container {
+  text-align: center;
+  height: 100%;
+  background: #F3F3F3;
+}
+
+.small {
+  flex-basis: 32%;
+}
+
+.big{
+  flex-basis: 49%;
+}
+
+img {
+  max-width: 100%;
+  position: relative;
+  top: 3px;
+}
+
+@media only screen and (max-width: 500px) {
+ .small, .big {
+  flex-basis: 100%;
+   margin-top: 2%;
+  }
+  .first-row, .second-row {
+  margin-top: 0;
+  }
+  .innnovation img{
+    content:url("https://www.epequip.biz/wp-content/uploads/2018/12/EPE-Trusted-To-Protect_Nova_small.jpg");
+  }
+  .project img{
+    content:url("https://www.epequip.biz/wp-content/uploads/2018/12/EPE-Trusted-To-Protect_Projects_small.jpg");
+  }
+}
