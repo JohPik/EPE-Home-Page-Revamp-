@@ -8,13 +8,19 @@ h3 {
   margin: 0.5em 0;
 }
 
+h4 {
+  font-size: .8em;
+  margin: 0.5em 0;
+}
+
+
 h2 {
   font-size: 1.2em;
 }
 
 /******************************** Home Page Styling ********************************/
 
-.our-capability, .our-customers {
+.our-capability, .our-customers, .our-offering {
   max-width: 70em;
   width:100%;
   margin: 5vh auto;
@@ -76,7 +82,7 @@ h2 {
   margin-top: 2%;
 }
 
-.container {
+.our-capability .container, .our-customers .container {
   text-align: center;
   height: 100%;
   background: #F3F3F3;
@@ -87,7 +93,7 @@ h2 {
   flex-basis: 32%;
 }
 
-.big{
+.large{
   flex-basis: 49%;
 }
 
@@ -97,11 +103,33 @@ img {
   top: 5px;
 }
 
+/* Specific to Offering/ map Section */
+.our-offering .first-row {
+  justify-content: space-around;
+}
+
+.our-offering .container{
+  width:33.3%;
+  text-align: center;
+}
+
+.our-offering .container h3{
+  color: #C60303;
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: .1em;
+}
+
+.our-offering .container h4{
+  font-weight: lighter;
+  margin-top: 0;
+}
+
 /******************************* Responsive Design *******************************/
 @media only screen and (max-width: 550px) {
- .small, .big {
+ .small, .large {
   flex-basis: 100%;
-   margin-top: 2%;
+  margin-bottom:2em;
   }
   .first-row, .second-row {
   margin-top: 0;
