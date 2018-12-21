@@ -1,6 +1,7 @@
 /******************************* General Styling *******************************/
 * {
   font-family: 'Open Sans', sans-serif;
+  border-bottom-width: 0px;
 }
 
 h3 {
