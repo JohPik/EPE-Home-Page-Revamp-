@@ -5,7 +5,7 @@
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.1em;
   margin: 0.5em 0;
 }
 
@@ -98,8 +98,8 @@ h2 {
   flex-basis: 49%;
 }
 
-img {
-  max-width: 100%;
+.container img, .full-with-container img {
+  width: 100%;
   position: relative;
   top: 5px;
 }
@@ -127,7 +127,7 @@ img {
 }
 
 /******************************* Responsive Design *******************************/
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
  .small, .large {
   flex-basis: 100%;
   margin-bottom:2em;
@@ -141,4 +141,121 @@ img {
   .project img{
     content:url("https://www.epequip.biz/wp-content/uploads/2018/12/EPE-Trusted-To-Protect_Projects_small.jpg");
   }
+}
+
+/** Tile Animation **/
+.front {
+  height: 100%;
+  width: 100%;
+}
+
+.back {
+  height: 100%;
+  position: absolute;
+  background: #F3F3F3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform .5s;
+  transform: translate(0, -100%) rotate(90deg);
+  transform-origin: top left;
+  color: black;
+  padding: 0 20px;
+}
+
+.back h3 {
+  font-weight: bold;
+}
+
+.back a {
+  text-decoration: none;
+  border: 2px solid #333;
+  padding: 5px 25px;
+  margin: 0 auto;
+  transition: all .5s;
+  font-weight: bold;
+}
+
+.back a:hover {
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.flipped {
+  transform: rotate(0deg)  translate(0, -100%);
+}
+
+.product-line, .training, .maintenance, .innovation, .project {
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/*  product-line  */
+.product-line .back h3 {
+  color: #23438A;
+}
+
+.product-line .back a {
+  color: #23438A;
+}
+
+.product-line .back a:hover {
+  border: 2px solid #23438A;
+}
+
+/*  training  */
+
+.training .back h3 {
+  color: #CE4343;
+}
+
+.training .back a {
+  color: #CE4343;
+}
+
+.training .back a:hover {
+  border: 2px solid #CE4343;
+}
+
+/*  maintenance  */
+
+.maintenance  .back h3 {
+  color: #FF6F00;
+}
+
+.maintenance .back a {
+  color: #FF6F00;
+}
+
+.maintenance .back a:hover {
+  border: 2px solid #FF6F00;
+}
+
+/*  Innovation  */
+
+.innovation .back h3 {
+  color: #3BC5F4;
+}
+
+.innovation .back a {
+  color: #4F9BB5;
+}
+
+.innovation .back a:hover {
+  border: 2px solid #4F9BB5;
+}
+
+/*  Projects  */
+
+.project .back h3 {
+  color: #599C66;
+}
+
+.project .back a {
+  color: #599C66;
+}
+
+.project .back a:hover {
+  border: 2px solid #599C66;
 }
